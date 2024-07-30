@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short story long</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/102ca79a2f.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS для шапки */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1d;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #e85a4f;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #1a1a1d;
+      margin-right: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .dropdown {
+        position: relative;
+        right: 45px;
+        margin: 20px;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 35px;
+        right: 0px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        font-family: sans-serif;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #e85a4f; color: #fff;}
+
+    .show {display: block;}
+
+    .register {
+        position: relative;
+        left: 550px;
+        padding: 10px 20px;
+        -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+    }
+
+    .register {
+        display: inline-block; 
+         overflow: hidden;
+    }
+
+    .register {
+      transition: 0.5s; 
+     display: block; 
+    }
+
+    .register:hover {
+      transform: scale(1.2); 
+    }
+
+    /* CSS для мэйна */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://gamemag.ru/images/cache/News/News153367/2571f19bcf-2_1390x600.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: none;
+      text-align: center;
+      margin: 20px 400px;
+      font-family: sans-serif;
+    }
+
+    .block-sistema {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 80px 80px;
+    }
+
+    .block-sistema .block1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 150px;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    .block-sistema .block1 {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      padding: 12px;
+    }
+
+    .block-sistema .block1 .sistema-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+      transition: 0.25s linear;
+      padding: 10px;
+      text-decoration: none
+    }
+
+    .block-sistema .block1 .sistema-heading:hover {
+        color: #fff;
+        background: #e85a4f;
+    }
+
+    .block-sistema .block1 .sistema-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 80px;
+    }
+
+    .about-sistema {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 80px;
+        border-top: 2px solid #eeeeee;
+        flex-direction: row;
+    }
+
+    .video-pro-sistemu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .video-pro-sistemu {
+        margin-left: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-sistema-text {
+        flex: 1;
+        text-align: center;
+    }
+
+    .about-sistema-text h2 {
+        font-size: 30px;
+        color: #333333;
+        text-transform: uppercase;
+        margin: 0;
+        font-family:sans-serif;
+    }
+
+    .about-sistema-text p {
+        font-size: 20px;
+        color: #585858;
+        margin: 10px 10px 0 0;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+    .about-sistema-text a {
+        font-size: 20px;
+        color: #585858;
+        font-family: sans-serif;
+        text-decoration: none;
+        transition: 0.25s linear;
+        padding: 5px;
+    }
+
+    .about-sistema-text a:hover {
+        color: #fff;
+        background: #e85a4f;
+    }
+
+    /* CSS для футера */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1d;
+      padding: 10px 20px 20px 10px;
+    }
+
+    .footer .copy {
+      color: #fff;
+      font-family: sans-serif;
+      margin-left: 40px;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+      font-family: sans-serif;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 30px;
+      background-color: #1a1a1d;
+      transition: 0.25s linear;
+    }
+
+    .bottom-links .links a:hover {
+      color: #fff;
+      background-color: #e85a4f;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Short story long</a>
+    <div class="register">
+        <a href="reg.html" class="fa-solid fa-user" style="color: #e85a47;"></a>
+    </div>
+    <div class="dropdown" >
+        <i onclick="myFunction()" class="fa-solid fa-bars" style="color: #e85a4f;"></i>
+        <div id="menu" class="dropdown-content" >
+            <a href="deti_main.html">Tales From The Loop</a>
+            <a href="fate_main.html">FATE</a>
+            <a href="shinobi_main.html">Shinobi</a>
+        </div>
+      </div>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Шиноби</h1>
+      <p>В “Шиноби” тебе предстоит взять на себя роль агента дзайбацу (одной из японских мега-корпораций), вольного наёмника или боевика якудза (японской мафии).</p>
+    </div>
+    <div class="about-sistema">
+      <div class="about-sistema-text">
+        <h2>Больше информации о системе!</h2>
+        <p>Для подробного ознакомления с системой, предлагаем посмотреть видео-ролик, в котором подробно описывается игровой процесс. </p>
+        <p>Если вы хотите посмотреть на то, как в это играют другие, то кликайте сюда:<a href="https://youtu.be/KasblQTMve4?si=hsELto79RgYN6WO9"> "Хочу ещё видео!"</a>, так вы получите доступ к записям игры. </p>
+      </div>
+    </div>
+    <div class="video-pro-sistemu">
+        <iframe width="1120" height="620" src="https://www.youtube.com/embed/8i5P7YMnqLU?si=kxYlc1XesXS6caVJ&amp;start=800" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="block-sistema">
+        <div class="block1">
+          <i class="fa-solid fa-file"></i>
+          <a href="shinobi_char.html" class="sistema-heading">Лист персонажа</a>
+          <p class="sistema-text">Инструмент, который поможет вам подготовиться к вашей игре!</p>
+        </div>
+        <div class="block1">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <a href="shinobi_info.html" class="sistema-heading">Информация о системе</a>
+          <p class="sistema-text">Здесь можно подробнее ознакомиться о важных элементах системы.</p>
+        </div>
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="copy">&copy; 2024, Мирошникова Ксения</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>Социальные сети</span>
+        <a href="https://vk.com/i_am_a_sherloced"><i class="fa-brands fa-vk"></i></a>
+        <a href="https://t.me/motherrmgi"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function myFunction() {
+        document.getElementById("menu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.fa-solid.fa-bars')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short story long</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/102ca79a2f.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS для шапки */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1d;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #e85a4f;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #1a1a1d;
+      margin-right: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .dropdown {
+        position: relative;
+        right: 45px;
+        margin: 20px;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 35px;
+        right: 0px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        font-family: sans-serif;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #e85a4f; color: fff;}
+
+    .show {display: block;}
+
+    .register {
+        position: relative;
+        left: 550px;
+        padding: 10px 20px;
+        -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+    }
+
+    .register {
+        display: inline-block; 
+         overflow: hidden;
+    }
+
+    .register {
+      transition: 0.5s; 
+     display: block; 
+    }
+
+    .register:hover {
+      transform: scale(1.2); 
+    }
+
+    /* CSS для мэйна */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://dropthedie.com/wp-content/uploads/2017/05/unused_sketch_for_total_war_kingdom_by_luulala-daowxit.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: none;
+      text-align: center;
+      margin: 20px 400px;
+      font-family: sans-serif;
+    }
+
+    .systems {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .systems .systems {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 150px;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    .systems .systems {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      padding: 12px;
+    }
+
+    .systems .systems .system-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+      transition: 0.25s linear;
+      padding: 10px;
+      text-decoration: none
+    }
+
+    .systems .systems .system-heading:hover {
+        color: #fff;
+        background: #e85a4f;
+    }
+
+    .systems .systems .system-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 80px;
+    }
+
+    .about-nri {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-nri img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-nri-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .about-nri-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 100px 0 0;
+      font-family: sans-serif;
+    }
+
+    /* CSS для футера */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1d;
+      padding: 10px 20px 20px 10px;
+    }
+
+    .footer .copy {
+      color: #fff;
+      font-family: sans-serif;
+      margin-left: 40px;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+      font-family: sans-serif;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 30px;
+      background-color: #1a1a1d;
+      transition: 0.25s linear;
+    }
+
+    .bottom-links .links a:hover {
+      color: #fff;
+      background-color: #e85a4f;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Short story long</a>
+    <div class="register">
+        <a href="reg.html" class="fa-solid fa-user" style="color: #e85a47;"></a>
+    </div>
+    <div class="dropdown" >
+        <i onclick="myFunction()" class="fa-solid fa-bars" style="color: #e85a4f;"></i>
+        <div id="menu" class="dropdown-content" >
+            <a href="deti_main.html">Tales From The Loop</a>
+            <a href="fate_main.html">FATE</a>
+            <a href="shinobi_main.html">Shinobi</a>
+        </div>
+      </div>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Библиотека систем</h1>
+      <p>Здесь собрано самое важное по трем системам: Tales From The Loop, FATE и Shinobi. Скорее приступайте к изучению и окунитесь в мир настольно-ролевых игр</p>
+    </div>
+    <div class="systems">
+      <div class="systems">
+        <i class="fa-solid fa-microchip"></i>
+        <a href="deti_main.html" class="system-heading">Tales From The Loop</a>
+        <p class="system-text">Настольная ролевая игра, в которой вы играете за детей в альтернативных 80-ых, среди роботов и больших магнетронных градирнь, исследуя острова Швеции.</p>
+      </div>
+      <div class="systems">
+        <i class="fa-solid fa-dragon"></i>
+        <a href="fate_main.html" class="system-heading">FATE</a>
+        <p class="system-text">Настольная ролевая игра, где ты и твои друзья рассказываете друг другу истории о захватывающих приключениях, полных опасностей и удивительных открытий.</p>
+      </div>
+      <div class="systems">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <a href="shinobi_main.html" class="system-heading">Shinobi</a>
+        <p class="system-text">В “Шиноби” тебе предстоит взять на себя роль агента дзайбацу (одной из японских мега-корпораций), вольного наёмника или боевика якудза (японской мафии).</p>
+      </div>
+    </div>
+    <div class="about-nri">
+      <div class="about-nri-text">
+        <h2>Что такое НРИ?</h2>
+        <p>Все участники, кроме одного, придумывают персонажей, которые станут главными героями будущей истории. Во время игры ты рассказываешь, что персонаж делает и говорит, как он выглядит и что чувствует. Ты буквально притворяешься им, будто играешь роль в кино или любительской постановке. Как правило, это легче сделать, если описывать действия героя от первого лица, говоря «я» вместо «он» или «она». </p>
+        <p>Один из участников игры берёт на себя роль ведущего. Он описывает действия всех прочих персонажей истории, будь то люди, роботы или иные создания. Кроме того, он рассказывает, что происходит в мире игры, что герои видят, слышат и ощущают. Работа ведущего напоминает работу режиссёра: он наполняет жизнь персонажей событиями и следит за тем, чтобы повествование развивалось — от одной сцены к другой.</p>
+      </div>
+      <img src="https://cityofmist.co/cdn/shop/articles/Tabletop_Gencon_2016_1200x.jpg?v=1609281382" alt="nri">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="copy">&copy; 2024, Мирошникова Ксения</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>Социальные сети</span>
+        <a href="https://vk.com/i_am_a_sherloced"><i class="fa-brands fa-vk"></i></a>
+        <a href="https://t.me/motherrmgi"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function myFunction() {
+        document.getElementById("menu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.fa-solid.fa-bars')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</body>
+
+</html>
